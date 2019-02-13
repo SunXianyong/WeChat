@@ -16,7 +16,7 @@ def weiXin():
     if request.method == "GET":
         return weixinyanzheng()
 
-    soup = BeautifulSoup(request.data,features="lxml-xml")
+    soup = BeautifulSoup(request.data,features="lxml-xml",from_encoding="utf-8")
     print(str(soup.xml))
     print("-"*40)
 
@@ -28,14 +28,14 @@ def weiXin():
     soup.FromUserName.string = to_addr
 
     # 用户消息
-    print(str(soup.xml))
 
-    if hasattr(sys.modules['__main__'], soup.MsgType.string):
-        soup = getattr(sys.modules['__main__'], soup.MsgType.string+'_type')(soup)
+    if hasattr(sys.modules['App.views.weixin'], soup.MsgType.string + "_type"):
+        soup = getattr(sys.modules['App.views.weixin'], soup.MsgType.string+'_type')(soup)
     else:
         return 'success'
 
     soup.CreateTime.string = str(int(time.time()))
+    print(str(soup.xml))
     return str(soup.xml)
 
 
@@ -48,9 +48,14 @@ def text_type(soup):
 def link_type(soup):
     get_text(soup.Url.string)
     make_mp3()
+    musurl = soup.new_tag("MusicURL")
+    thumbid = soup.new_tag("ThumbMediaId")
+    soup.MsgType.string = "music"
+    soup.MsgType.insert_after(musurl)
+    soup.MsgType.insert_after(thumbid)
     soup.MusicURL.string = "https://music.163.com/#/song?id=516728102"
     soup.ThumbMediaId.string = "https://music.163.com/#/song?id=516728102"
-
+    return soup
 
 # 微信官方验证
 def weixinyanzheng():
