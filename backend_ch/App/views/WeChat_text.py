@@ -8,7 +8,7 @@ def get_text(url):
     http = urllib3.PoolManager()
     html = http.request('GET',url)
 
-    soup = BeautifulSoup(html.data,features="lxml-xml")
+    soup = BeautifulSoup(html.data,features="lxml")
     all_content = soup.find('div',id='img-content')
     main_content = all_content.find("div",id="js_content")
 
