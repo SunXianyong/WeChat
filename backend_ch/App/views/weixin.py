@@ -48,13 +48,18 @@ def text_type(soup):
 def link_type(soup):
     get_text(soup.Url.string)
     make_mp3()
+    soup.MsgType.string = "music"
+
+    music = soup.new_tag("Music")
+    music.insert(soup.Title)
+    music.insert(soup.Description)
     musurl = soup.new_tag("MusicURL")
     thumbid = soup.new_tag("ThumbMediaId")
-    soup.MsgType.string = "music"
-    soup.MsgType.insert_after(musurl)
-    soup.MsgType.insert_after(thumbid)
-    soup.MusicURL.string = "https://music.163.com/#/song?id=516728102"
-    soup.ThumbMediaId.string = "https://music.163.com/#/song?id=516728102"
+    musurl.string = "https://music.163.com/#/song?id=516728102"
+    thumbid.string = "https://music.163.com/#/song?id=516728102"
+    music.insert(musurl)
+    music.insert(thumbid)
+    soup.MsgType.insert_after(music)
     return soup
 
 # 微信官方验证

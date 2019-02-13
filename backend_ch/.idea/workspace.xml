@@ -4,7 +4,8 @@
     <list default="true" id="1d2ffe2c-6b12-4c15-a60b-52b1e8662e56" name="Default Changelist" comment="时间戳 转化">
       <change beforePath="$PROJECT_DIR$/../backend_ch.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/views/WeChat_text.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/views/WeChat_text.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/views/weixin.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/views/weixin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mbry.zip" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,12 +105,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="355" />
+          <entry key="py" value="377" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="355" />
+          <entry key="Python" value="377" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -185,8 +186,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/views/weixin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state relative-caret-position="777">
+              <caret line="55" column="17" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="17" />
               <folding>
                 <element signature="e#30#40#0" expanded="true" />
               </folding>
@@ -242,9 +243,9 @@
         <option value="$PROJECT_DIR$/manager.py" />
         <option value="$PROJECT_DIR$/App/views/__init__.py" />
         <option value="$PROJECT_DIR$/App/views/textToMp3.py" />
-        <option value="$PROJECT_DIR$/App/views/weixin.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/App/views/WeChat_text.py" />
+        <option value="$PROJECT_DIR$/App/views/weixin.py" />
       </list>
     </option>
   </component>
@@ -505,9 +506,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-372" width="916" height="1456" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19275701" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.19275701" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="1" weight="0.42713955" />
@@ -518,7 +520,7 @@
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.3299923" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="8" />
-      <window_info anchor="bottom" id="Find" order="9" visible="true" weight="0.3299923" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.3299923" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.3993832" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -722,13 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/views/textToMp3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="25" lean-forward="true" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -745,6 +740,20 @@
     <entry file="file://$PROJECT_DIR$/App/views/txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/bs4/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="117" column="14" lean-forward="true" selection-start-line="110" selection-start-column="8" selection-end-line="117" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/views/textToMp3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="25" lean-forward="true" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/App/views/WeChat_text.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -755,17 +764,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/bs4/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="117" column="14" lean-forward="true" selection-start-line="110" selection-start-column="8" selection-end-line="117" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/views/weixin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state relative-caret-position="777">
+          <caret line="55" column="17" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="17" />
           <folding>
             <element signature="e#30#40#0" expanded="true" />
           </folding>
