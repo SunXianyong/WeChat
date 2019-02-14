@@ -28,3 +28,15 @@ def up_thumb():
     r = http.request('POST', url, fields={'media': (filname, file_data),})
     dic = json.loads(r.data.decode('utf-8'))
     return dic
+
+
+# 获取缩略图id
+def thumb_id():
+    http = urllib3.PoolManager()
+    access = get_acc()
+    url = f"https://api.weixin.qq.com/cgi-bin/material/get_material?access_token={access}"
+    r = http.request('POST', url, fields={'media_id': "WaPOTn8FGx9Xug29nk9U0uLAn7Hq424Zmf44v5qi9B0"})
+    dic = json.loads(r.data.decode('utf-8'))
+    print(dic)
+
+thumb_id()
