@@ -54,13 +54,15 @@ def link_type(soup):
     # make_mp3()
 
     # 修改xml
-    soup.MsgType.string = "image"
-    music = soup.new_tag("Image")
+    soup.MsgType.string = "music"
+    music = soup.new_tag("Music")
     music.append(soup.Title)
     music.append(soup.Description)
     musurl = soup.new_tag("MusicUrl")
-    thumbid = soup.new_tag("MediaId")
-    musurl.string = "http://m8.music.126.net/20190214151958/3efdf845da55dd9625ccf4cb1bf52fd2/ymusic/5258/0f5f/015c/e23eb784398544031837660e6d233a6e.mp3"
+    hqmusurl = soup.new_tag("HQMusicUrl")
+    thumbid = soup.new_tag("ThumbMediaId")
+    musurl.string = "http://m8.music.126.net/20190214165153/b706911f1fa51d7ad3cdbd0e33504bcc/ymusic/0a18/e88d/979f/6d5282fba78b1674f3103ab87342846a.mp3"
+    hqmusurl.string = "http://m8.music.126.net/20190214165153/b706911f1fa51d7ad3cdbd0e33504bcc/ymusic/0a18/e88d/979f/6d5282fba78b1674f3103ab87342846a.mp3"
     thumbid.string = "WaPOTn8FGx9Xug29nk9U0uLAn7Hq424Zmf44v5qi9B0"
     music.append(musurl)
     music.append(thumbid)
