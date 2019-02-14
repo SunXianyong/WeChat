@@ -53,6 +53,9 @@ def link_type(soup):
     # 转为音频 MP3
     make_mp3()
 
+    # 获取缩略图id
+
+
     # 修改xml
     soup.MsgType.string = "music"
     music = soup.new_tag("Music")
