@@ -35,5 +35,5 @@ def make_mp3(user):
                 lenth = 0
             lenth += i_len
             text += i
-        get_bin(text)
+        get_bin(text,user)
     return user
