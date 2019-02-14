@@ -48,18 +48,18 @@ def text_type(soup):
 def link_type(soup):
 
     # 爬取连接文章内容
-    get_text(soup.Url.string)
+    # get_text(soup.Url.string)
 
     # 转为音频 MP3
-    make_mp3()
+    # make_mp3()
 
     # 修改xml
     soup.MsgType.string = "image"
-    music = soup.new_tag("Music")
+    music = soup.new_tag("Image")
     music.append(soup.Title)
     music.append(soup.Description)
     musurl = soup.new_tag("MusicUrl")
-    thumbid = soup.new_tag("ThumbMediaId")
+    thumbid = soup.new_tag("MediaId")
     musurl.string = "http://m8.music.126.net/20190214151958/3efdf845da55dd9625ccf4cb1bf52fd2/ymusic/5258/0f5f/015c/e23eb784398544031837660e6d233a6e.mp3"
     thumbid.string = "WaPOTn8FGx9Xug29nk9U0uLAn7Hq424Zmf44v5qi9B0"
     music.append(musurl)
