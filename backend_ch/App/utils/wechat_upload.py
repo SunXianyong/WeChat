@@ -38,7 +38,7 @@ def thumb_id():
     encoded_data = json.dumps(data).encode('utf-8')
     url = f"https://api.weixin.qq.com/cgi-bin/material/get_material?access_token={access}"
     r = http.request('POST', url, body=encoded_data, headers={'Content-Type': 'application/json'})
-    dic = json.loads(r.data.decode('utf-8'))
-    print(dic)
+    # dic = json.loads(r.data.decode('utf-8'))
+    print(str(r.data,"utf-8"))
 
 thumb_id()
