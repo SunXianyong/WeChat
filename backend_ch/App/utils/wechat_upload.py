@@ -42,6 +42,7 @@ def thumb_id():
     print(dic)
 
 
+# 客服转发
 def wc_send():
     http = urllib3.PoolManager()
     access = get_acc()
