@@ -34,10 +34,9 @@ def weiXin():
     else:
         return 'success'
 
-    # soup.CreateTime.string = str(int(time.time()))
-    # print(str(soup.xml))
-    # return str(soup.xml)
-    return soup
+    soup.CreateTime.string = str(int(time.time()))
+    print(str(soup.xml))
+    return str(soup.xml)
 
 
 # 文本内容回复方式
@@ -47,10 +46,15 @@ def text_type(soup):
 
 # 连接内容回复方式
 def link_type(soup):
-    get_text(soup.Url.string)
-    make_mp3()
-    soup.MsgType.string = "music"
 
+    # 爬取连接文章内容
+    get_text(soup.Url.string)
+
+    # 转为音频 MP3
+    make_mp3()
+
+    # 修改xml
+    soup.MsgType.string = "music"
     music = soup.new_tag("Music")
     music.append(soup.Title)
     music.append(soup.Description)
@@ -71,7 +75,7 @@ def link_type(soup):
              "<ThumbMediaId>WaPOTn8FGx9Xug29nk9U0uLAn7Hq424Zmf44v5qi9B0</ThumbMediaId>" \
              "</Music>" \
              "</xml>"
-    return my_xml
+    return soup
 
 
 # 微信官方验证
