@@ -1,9 +1,7 @@
 # from ..extensions import db
-import sys
-import time
+import os
 import hashlib
-from flask import Blueprint, request
-from bs4 import BeautifulSoup
+from flask import Blueprint, request, send_file, send_from_directory
 from .WeChat_text import get_text
 from .textToMp3 import make_mp3
 
@@ -11,33 +9,11 @@ from .textToMp3 import make_mp3
 music = Blueprint("music", __name__)
 
 
-@music.route("/", methods=["GET","POST"])
-def weiXin():
-    # 微信官方验证
-    # if request.method == "GET":
-    #     return weixinyanzheng()
-    #
-    # soup = BeautifulSoup(request.data,features="lxml-xml",from_encoding="utf-8")
-    # print(str(soup.xml))
-    # print("-"*40)
-    #
-    # # 互换 收发人
-    # to_addr = soup.ToUserName.string
-    # from_addr = soup.FromUserName.string
-    #
-    # soup.ToUserName.string = from_addr
-    # soup.FromUserName.string = to_addr
-    #
-    # # 用户消息
-    #
-    # if hasattr(sys.modules['App.views.weixin'], soup.MsgType.string + "_type"):
-    #     soup = getattr(sys.modules['App.views.weixin'], soup.MsgType.string+'_type')(soup)
-    # else:
-    #     return 'success'
-    #
-    # soup.CreateTime.string = str(int(time.time()))
-    # print(str(soup.xml))
-    return "ok"
+@music.route("/get/<filename>", methods=["GET","POST"])
+def weiXin(filename):
+    path = os.getcwd()
+
+    return send_from_directory(path, filename, as_attachment=True)
 
 
 # 文本内容回复方式
