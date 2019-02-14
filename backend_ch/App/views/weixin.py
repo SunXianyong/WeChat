@@ -49,11 +49,11 @@ def text_type(soup):
 def link_type(soup):
 
     # 爬取连接文章内容
-    # get_text(soup.Url.string)
+    get_text(soup.Url.string)
 
     # 转为音频 MP3
-    # mp3_name = make_mp3(soup.ToUserName.string)
-    mp3_name = "oH-qc1R3KtLpsIEoyIBwgiAM07C4"
+    mp3_name = make_mp3(soup.ToUserName.string)
+    # mp3_name = "oH-qc1R3KtLpsIEoyIBwgiAM07C4"
     mp3_url = f"http://39.96.190.86/music/get/{mp3_name}.mp3"
 
     # 修改xml
