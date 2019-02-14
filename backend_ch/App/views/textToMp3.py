@@ -10,7 +10,7 @@ client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)
 
 
 # 生成音频二进制
-def get_bin(text):
+def get_bin(text,user):
 
     result = client.synthesis(text, 'zh', 1, {
         'vol': 5, 'per': 3,
@@ -18,21 +18,22 @@ def get_bin(text):
 
     # 识别正确返回语音二进制 错误则返回dict 参照下面错误码
     if not isinstance(result, dict):
-        with open('baoba.mp3', 'ab') as f:
+        with open(f'{user}.mp3', 'ab') as f:
             f.write(result)
 
 
 # 文本读取
-def make_mp3():
+def make_mp3(user):
     with open('txt','r',encoding='utf8') as f:
         lenth = 0
         text = ''
         for i in f:
             i_len = len(bytes(i, encoding='utf-8'))
             if lenth + i_len >= 1023:
-                get_bin(text)
+                get_bin(text,user)
                 text = ''
                 lenth = 0
             lenth += i_len
             text += i
         get_bin(text)
+    return user

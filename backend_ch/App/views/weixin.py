@@ -52,7 +52,9 @@ def link_type(soup):
     get_text(soup.Url.string)
 
     # 转为音频 MP3
-    make_mp3()
+    mp3_name = make_mp3(soup.ToUserName.string)
+
+    mp3_url = f"http://39.96.190.86/music/get/{mp3_name}.mp3"
 
     # 修改xml
     soup.MsgType.string = "music"
@@ -62,8 +64,8 @@ def link_type(soup):
     musurl = soup.new_tag("MusicUrl")
     hqmusurl = soup.new_tag("HQMusicUrl")
     thumbid = soup.new_tag("ThumbMediaId")
-    musurl.string = "http://m8.music.126.net/20190214165153/b706911f1fa51d7ad3cdbd0e33504bcc/ymusic/0a18/e88d/979f/6d5282fba78b1674f3103ab87342846a.mp3"
-    hqmusurl.string = "http://m8.music.126.net/20190214165153/b706911f1fa51d7ad3cdbd0e33504bcc/ymusic/0a18/e88d/979f/6d5282fba78b1674f3103ab87342846a.mp3"
+    musurl.string = mp3_url
+    hqmusurl.string = mp3_url
     thumbid.string = "WaPOTn8FGx9Xug29nk9U0uLAn7Hq424Zmf44v5qi9B0"
     music.append(musurl)
     music.append(hqmusurl)
