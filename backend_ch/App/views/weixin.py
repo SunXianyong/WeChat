@@ -54,7 +54,7 @@ def link_type(soup):
     make_mp3()
 
     # 修改xml
-    soup.MsgType.string = "music"
+    soup.MsgType.string = "image"
     music = soup.new_tag("Music")
     music.append(soup.Title)
     music.append(soup.Description)
