@@ -25,8 +25,6 @@ def up_thumb():
     filname = "mbry.JPG"
     with open(filname, "rb") as f:
         file_data = f.read()
-    r = http.request('POST', url, fields={'filefield': (filname, file_data),})
+    r = http.request('POST', url, fields={'media': (filname, file_data),})
     dic = json.loads(r.data.decode('utf-8'))
-    print(dic)
-
-up_thumb()
+    return dic
