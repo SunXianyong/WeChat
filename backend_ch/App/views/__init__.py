@@ -1,10 +1,12 @@
 # from .order import order
 # from .goods import goods
 from .weixin import weixin
+from .music import music
 
 
 blueprints = [
     (weixin, "/"),
+    (music, "/music"),
 ]
 
 

@@ -8,36 +8,36 @@ from .WeChat_text import get_text
 from .textToMp3 import make_mp3
 
 
-weixin = Blueprint("weixin", __name__)
+music = Blueprint("music", __name__)
 
 
-@weixin.route("/weixin", methods=["GET","POST"])
+@music.route("/", methods=["GET","POST"])
 def weiXin():
     # 微信官方验证
-    if request.method == "GET":
-        return weixinyanzheng()
-
-    soup = BeautifulSoup(request.data,features="lxml-xml",from_encoding="utf-8")
-    print(str(soup.xml))
-    print("-"*40)
-
-    # 互换 收发人
-    to_addr = soup.ToUserName.string
-    from_addr = soup.FromUserName.string
-
-    soup.ToUserName.string = from_addr
-    soup.FromUserName.string = to_addr
-
-    # 用户消息
-
-    if hasattr(sys.modules['App.views.weixin'], soup.MsgType.string + "_type"):
-        soup = getattr(sys.modules['App.views.weixin'], soup.MsgType.string+'_type')(soup)
-    else:
-        return 'success'
-
-    soup.CreateTime.string = str(int(time.time()))
-    print(str(soup.xml))
-    return str(soup.xml)
+    # if request.method == "GET":
+    #     return weixinyanzheng()
+    #
+    # soup = BeautifulSoup(request.data,features="lxml-xml",from_encoding="utf-8")
+    # print(str(soup.xml))
+    # print("-"*40)
+    #
+    # # 互换 收发人
+    # to_addr = soup.ToUserName.string
+    # from_addr = soup.FromUserName.string
+    #
+    # soup.ToUserName.string = from_addr
+    # soup.FromUserName.string = to_addr
+    #
+    # # 用户消息
+    #
+    # if hasattr(sys.modules['App.views.weixin'], soup.MsgType.string + "_type"):
+    #     soup = getattr(sys.modules['App.views.weixin'], soup.MsgType.string+'_type')(soup)
+    # else:
+    #     return 'success'
+    #
+    # soup.CreateTime.string = str(int(time.time()))
+    # print(str(soup.xml))
+    return "ok"
 
 
 # 文本内容回复方式
