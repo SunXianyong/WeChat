@@ -65,6 +65,7 @@ def link_type(soup):
     hqmusurl.string = "http://m8.music.126.net/20190214165153/b706911f1fa51d7ad3cdbd0e33504bcc/ymusic/0a18/e88d/979f/6d5282fba78b1674f3103ab87342846a.mp3"
     thumbid.string = "WaPOTn8FGx9Xug29nk9U0uLAn7Hq424Zmf44v5qi9B0"
     music.append(musurl)
+    music.append(hqmusurl)
     music.append(thumbid)
     soup.MsgType.insert_after(music)
     soup.Url.extract()
