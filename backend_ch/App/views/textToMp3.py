@@ -18,7 +18,7 @@ def get_bin(text,user):
     })
 
     # 识别正确返回语音二进制 错误则返回dict 参照下面错误码
-    if not isinstance(result, dict):
+    if not isinstance(result, dict) and not result:
         return result
         # with open(f'{user}.mp3', 'ab') as f:
         #     f.write(result)
