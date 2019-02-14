@@ -30,7 +30,7 @@ def up_thumb():
     return dic
 
 
-# 获取缩略图id
+# 获取素材
 def thumb_id():
     http = urllib3.PoolManager()
     access = get_acc()
@@ -40,5 +40,3 @@ def thumb_id():
     r = http.request('POST', url, body=encoded_data, headers={'Content-Type': 'application/json'})
     dic = json.loads(r.data.decode('utf-8'))
     print(dic)
-
-thumb_id()

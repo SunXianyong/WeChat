@@ -53,15 +53,12 @@ def link_type(soup):
     # 转为音频 MP3
     make_mp3()
 
-    # 获取缩略图id
-
-
     # 修改xml
     soup.MsgType.string = "music"
     music = soup.new_tag("Music")
     music.append(soup.Title)
     music.append(soup.Description)
-    musurl = soup.new_tag("MusicURL")
+    musurl = soup.new_tag("MusicUrl")
     thumbid = soup.new_tag("ThumbMediaId")
     musurl.string = "https://music.163.com/#/song?id=516728102"
     thumbid.string = "WaPOTn8FGx9Xug29nk9U0uLAn7Hq424Zmf44v5qi9B0"
