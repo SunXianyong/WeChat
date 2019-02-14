@@ -22,6 +22,8 @@ def get_bin(text,user):
         return result
         # with open(f'{user}.mp3', 'ab') as f:
         #     f.write(result)
+    elif result is None:
+        return b''
     else:
         raise RuntimeError("转音频错误")
 
