@@ -34,9 +34,10 @@ def weiXin():
     else:
         return 'success'
 
-    soup.CreateTime.string = str(int(time.time()))
-    print(str(soup.xml))
-    return str(soup.xml)
+    # soup.CreateTime.string = str(int(time.time()))
+    # print(str(soup.xml))
+    # return str(soup.xml)
+    return soup
 
 
 # 文本内容回复方式
@@ -61,7 +62,19 @@ def link_type(soup):
     music.append(thumbid)
     soup.MsgType.insert_after(music)
     soup.Url.extract()
-    return soup
+    my_xml = "<xml>" \
+             "<ToUserName>oH-qc1R3KtLpsIEoyIBwgiAM07C4</ToUserName>" \
+             "<FromUserName>gh_c704f0a5b415</FromUserName>" \
+             "<CreateTime>1550121899</CreateTime>" \
+             "<MsgType>music</MsgType>" \
+             "<Music>" \
+             "<Title>为什么天津人都不推荐去狗不理？</Title>" \
+             "<Description>为什么天津人都不推荐去狗不理？</Description>" \
+             "<MusicUrl>https://music.163.com/#/song?id=516728102</MusicUrl>" \
+             "<ThumbMediaId>WaPOTn8FGx9Xug29nk9U0uLAn7Hq424Zmf44v5qi9B0</ThumbMediaId>" \
+             "</Music>" \
+             "</xml>"
+    return my_xml
 
 
 # 微信官方验证
