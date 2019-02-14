@@ -56,7 +56,7 @@ def link_type(soup):
     musurl = soup.new_tag("MusicURL")
     thumbid = soup.new_tag("ThumbMediaId")
     musurl.string = "https://music.163.com/#/song?id=516728102"
-    thumbid.string = "https://music.163.com/#/song?id=516728102"
+    thumbid.string = "WaPOTn8FGx9Xug29nk9U0uLAn7Hq424Zmf44v5qi9B0"
     music.insert(musurl)
     music.insert(thumbid)
     soup.MsgType.insert_after(music)

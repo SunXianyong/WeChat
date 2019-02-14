@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d2ffe2c-6b12-4c15-a60b-52b1e8662e56" name="Default Changelist" comment="时间戳 转化">
+      <change afterPath="$PROJECT_DIR$/App/utils/mbry.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/utils/wechat_upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/utils/wechat_upload.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/views/weixin.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/views/weixin.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,7 +15,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/backend_ch$WeChat_text.coverage" NAME="WeChat_text Coverage Results" MODIFIED="1550050817394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/App/views" />
-    <SUITE FILE_PATH="coverage/backend_ch$wechat_upload.coverage" NAME="wechat_upload Coverage Results" MODIFIED="1550111321855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/App/utils" />
+    <SUITE FILE_PATH="coverage/backend_ch$wechat_upload.coverage" NAME="wechat_upload Coverage Results" MODIFIED="1550119773485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/App/utils" />
     <SUITE FILE_PATH="coverage/backend_ch$manager.coverage" NAME="manager Coverage Results" MODIFIED="1549199244248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend_ch$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1550044803082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend_ch$weixin.coverage" NAME="weixin Coverage Results" MODIFIED="1548840959313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/App/views" />
@@ -104,24 +107,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="773" />
+          <entry key="py" value="796" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="773" />
+          <entry key="Python" value="796" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="14" />
+          <entry key="py" value="15" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="14" />
+          <entry key="Python" value="15" />
         </counts>
       </usages-collector>
     </session>
@@ -150,10 +153,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/App/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/utils/wechat_upload.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+            <state relative-caret-position="570">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="e#16#30#0" expanded="true" />
               </folding>
@@ -187,8 +202,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/views/weixin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+            <state relative-caret-position="563">
+              <caret line="59" column="11" lean-forward="true" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
               <folding>
                 <element signature="e#30#40#0" expanded="true" />
               </folding>
@@ -240,10 +255,10 @@
         <option value="$PROJECT_DIR$/App/views/__init__.py" />
         <option value="$PROJECT_DIR$/App/views/textToMp3.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
-        <option value="$PROJECT_DIR$/App/views/weixin.py" />
         <option value="$PROJECT_DIR$/App/views/WeChat_text.py" />
         <option value="$PROJECT_DIR$/App/utils/__init__.py" />
         <option value="$PROJECT_DIR$/App/utils/wechat_upload.py" />
+        <option value="$PROJECT_DIR$/App/views/weixin.py" />
       </list>
     </option>
   </component>
@@ -284,6 +299,12 @@
               <item name="App" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="backend_ch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend_ch" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -304,12 +325,13 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/App/models.py" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\my_project\dist\backend_ch\App\views" />
-      <recent name="D:\spider\new\spider\backend_ch\App" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ThinkPad\Desktop\dist\backend_ch\App\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\my_project\dist\backend_ch\App\utils" />
+      <recent name="D:\my_project\dist\backend_ch\App\views" />
+      <recent name="D:\spider\new\spider\backend_ch\App" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -324,7 +346,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.__init__ (1)">
+  <component name="RunManager" selected="Python.wechat_upload">
     <configuration name="WeChat_text" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="backend_ch" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -444,8 +466,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python.wechat_upload" />
+        <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python.WeChat_text" />
         <item itemvalue="Python.__init__" />
         <item itemvalue="Python.manager" />
@@ -732,16 +754,6 @@
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/views/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -763,16 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/views/weixin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-          <folding>
-            <element signature="e#30#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -808,10 +810,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/utils/wechat_upload.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+        <state relative-caret-position="570">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="e#16#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/views/weixin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="59" column="11" lean-forward="true" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
+          <folding>
+            <element signature="e#30#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
