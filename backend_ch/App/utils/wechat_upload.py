@@ -34,8 +34,10 @@ def up_thumb():
 def thumb_id():
     http = urllib3.PoolManager()
     access = get_acc()
+    data = {'media_id': "WaPOTn8FGx9Xug29nk9U0uLAn7Hq424Zmf44v5qi9B0"}
+    encoded_data = json.dumps(data).encode('utf-8')
     url = f"https://api.weixin.qq.com/cgi-bin/material/get_material?access_token={access}"
-    r = http.request('POST', url, fields={'media_id': "WaPOTn8FGx9Xug29nk9U0uLAn7Hq424Zmf44v5qi9B0"})
+    r = http.request('POST', url, body=encoded_data, headers={'Content-Type': 'application/json'})
     dic = json.loads(r.data.decode('utf-8'))
     print(dic)
 
