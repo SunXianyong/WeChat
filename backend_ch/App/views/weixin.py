@@ -60,7 +60,9 @@ def link_type(soup):
     music.append(musurl)
     music.append(thumbid)
     soup.MsgType.insert_after(music)
+    soup.Url.extract()
     return soup
+
 
 # 微信官方验证
 def weixinyanzheng():
