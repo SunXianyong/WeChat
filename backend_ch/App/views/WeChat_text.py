@@ -23,5 +23,3 @@ def get_text(url):
             f.write(i.text+"\n")
 
     return "5"
-
-get_text("url")
