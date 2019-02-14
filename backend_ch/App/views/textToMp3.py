@@ -46,6 +46,7 @@ def make_mp3(user):
 
     with open(f'{user}.mp3', 'wb') as f:
         for i in mp3_lis:
+            print(i)
             f.write(i)
 
     return user
