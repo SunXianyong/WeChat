@@ -51,14 +51,14 @@ def link_type(soup):
     soup.MsgType.string = "music"
 
     music = soup.new_tag("Music")
-    music.insert(soup.Title)
-    music.insert(soup.Description)
+    music.append(soup.Title)
+    music.append(soup.Description)
     musurl = soup.new_tag("MusicURL")
     thumbid = soup.new_tag("ThumbMediaId")
     musurl.string = "https://music.163.com/#/song?id=516728102"
     thumbid.string = "https://music.163.com/#/song?id=516728102"
-    music.insert(musurl)
-    music.insert(thumbid)
+    music.append(musurl)
+    music.append(thumbid)
     soup.MsgType.insert_after(music)
     return soup
 
