@@ -56,8 +56,8 @@ def text_type(soup):
     # 修改xml
     soup.MsgType.string = "music"
     music = soup.new_tag("Music")
-    music.append(soup.Title)
-    music.append(soup.Description)
+    music.append("音频文件")
+    music.append("")
     musurl = soup.new_tag("MusicUrl")
     hqmusurl = soup.new_tag("HQMusicUrl")
     thumbid = soup.new_tag("ThumbMediaId")
