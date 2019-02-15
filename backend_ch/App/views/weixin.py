@@ -122,7 +122,7 @@ def event_type(soup):
     articles = soup.new_tag("Articles")
     item = soup.new_tag("item")
     title = soup.new_tag("Title")
-    title.string = "叫你如何用"
+    title.string = "教你如何用"
     desc = soup.new_tag("Description")
     desc.string = "这是一篇帮助文章"
     picurl = soup.new_tag("PicUrl")
