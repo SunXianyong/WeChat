@@ -1,6 +1,7 @@
 # coding=utf-8
 from aip import AipSpeech
 import threading
+import time
 
 """ 你的 APPID AK SK """
 APP_ID = '15508666'
@@ -23,8 +24,7 @@ def get_bin(n,text):
     # 识别正确返回语音二进制 错误则返回dict 参照下面错误码
     if not isinstance(result, dict):
         q.append((n, result))
-        # with open(f'{user}.mp3', 'ab') as f:
-        #     f.write(result)
+
     else:
         raise RuntimeError("转音频错误")
 
@@ -36,7 +36,7 @@ def make_mp3(user):
     mp3_lis = []
 
     # 读取文件调用多线程
-    with open('txt','r',encoding='utf8') as f:
+    with open(f'data/{user}/txt','r',encoding='utf8') as f:
         lenth = 0
         text = ''
         for n,i in enumerate(f):
@@ -58,9 +58,11 @@ def make_mp3(user):
     [i.join() for i in mp3_lis]
 
     # 写入MP3文件
-    with open(f'{user}.mp3', 'wb') as f:
+    name = str(time.time())
+    with open(f'data/{user}/{name}.mp3', 'wb') as f:
         q.sort(key=lambda i: i[0])
         for i in q:
             f.write(i[1])
         q.clear()
-    return user
+
+    return name

@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import urllib3
 
 
-def get_text(url):
+def get_text(uid, url):
     http = urllib3.PoolManager()
     try:
         html = http.request('GET',url)
@@ -19,7 +19,7 @@ def get_text(url):
 
     all_p = main_content.find_all("p")
 
-    with open("txt","w",encoding="utf8") as f:
+    with open(f"data/{uid}/txt","w",encoding="utf8") as f:
 
         for i in all_p:
             if len(i.text) == 1:

@@ -42,16 +42,17 @@ def weiXin():
 
 # 文本内容回复方式
 def text_type(soup):
+    userid = soup.ToUserName.string
     # 爬取连接文章内容
-    s = get_text(soup.Content.string)
+    s = get_text(userid, soup.Content.string)
     if s is False:
         soup.Content.string = "请发送公众号文章连接"
         return soup
 
     # 转为音频 MP3
-    mp3_name = make_mp3(soup.ToUserName.string)
+    mp3_name = make_mp3(userid)
     # mp3_name = "oH-qc1R3KtLpsIEoyIBwgiAM07C4"
-    mp3_url = f"http://39.96.190.86/music/get/{mp3_name}.mp3"
+    mp3_url = f"http://39.96.190.86/music/get/{userid}/{mp3_name}.mp3"
 
     # 修改xml
     soup.MsgType.string = "music"
@@ -79,14 +80,15 @@ def text_type(soup):
 
 # 连接内容回复方式
 def link_type(soup):
+    userid = soup.ToUserName.string
 
     # 爬取连接文章内容
-    get_text(soup.Url.string)
+    get_text(userid, soup.Url.string)
 
     # 转为音频 MP3
-    mp3_name = make_mp3(soup.ToUserName.string)
+    mp3_name = make_mp3(userid)
     # mp3_name = "oH-qc1R3KtLpsIEoyIBwgiAM07C4"
-    mp3_url = f"http://39.96.190.86/music/get/{mp3_name}.mp3"
+    mp3_url = f"http://39.96.190.86/music/get/{userid}/{mp3_name}.mp3"
 
     # 修改xml
     soup.MsgType.string = "music"
