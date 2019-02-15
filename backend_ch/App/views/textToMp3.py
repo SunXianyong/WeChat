@@ -62,5 +62,5 @@ def make_mp3(user):
         q.sort(key=lambda i: i[0])
         for i in q:
             f.write(i[1])
-
+        q.clear()
     return user
