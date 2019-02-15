@@ -6,9 +6,10 @@ import urllib3
 
 def get_text(url):
     http = urllib3.PoolManager()
-    html = http.request('GET',url)
+    try:
+        html = http.request('GET',url)
 
-    if html.status != 200:
+    except Exception as e:
         return "请发送公众号文章连接"
 
     soup = BeautifulSoup(html.data,features="lxml")
