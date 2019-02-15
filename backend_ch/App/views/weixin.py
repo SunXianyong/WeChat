@@ -43,7 +43,7 @@ def weiXin():
 # 文本内容回复方式
 def text_type(soup):
     # 爬取连接文章内容
-    s = get_text(soup.Url.string)
+    s = get_text(soup.Content.string)
     if isinstance(s,str):
         soup.Content.string = s
         return soup
