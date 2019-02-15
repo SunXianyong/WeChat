@@ -8,6 +8,9 @@ def get_text(url):
     http = urllib3.PoolManager()
     html = http.request('GET',url)
 
+    if html.status != 200:
+        return "请发送公众号文章连接"
+
     soup = BeautifulSoup(html.data,features="lxml")
     all_content = soup.find('div',id='img-content')
     main_content = all_content.find("div",id="js_content")
@@ -21,4 +24,3 @@ def get_text(url):
                 continue
             f.write(i.text+"\n")
 
-    return "5"

@@ -42,6 +42,34 @@ def weiXin():
 
 # 文本内容回复方式
 def text_type(soup):
+    # 爬取连接文章内容
+    s = get_text(soup.Url.string)
+    if isinstance(s,str):
+        soup.Content.string = s
+        return soup
+
+    # 转为音频 MP3
+    mp3_name = make_mp3(soup.ToUserName.string)
+    # mp3_name = "oH-qc1R3KtLpsIEoyIBwgiAM07C4"
+    mp3_url = f"http://39.96.190.86/music/get/{mp3_name}.mp3"
+
+    # 修改xml
+    soup.MsgType.string = "music"
+    music = soup.new_tag("Music")
+    music.append(soup.Title)
+    music.append(soup.Description)
+    musurl = soup.new_tag("MusicUrl")
+    hqmusurl = soup.new_tag("HQMusicUrl")
+    thumbid = soup.new_tag("ThumbMediaId")
+    musurl.string = mp3_url
+    hqmusurl.string = mp3_url
+    thumbid.string = "WaPOTn8FGx9Xug29nk9U0uLAn7Hq424Zmf44v5qi9B0"
+    music.append(musurl)
+    music.append(hqmusurl)
+    music.append(thumbid)
+    soup.MsgType.insert_after(music)
+    soup.Url.extract()
+
     return soup
 
 
