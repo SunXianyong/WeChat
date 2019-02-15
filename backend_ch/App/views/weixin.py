@@ -110,6 +110,37 @@ def link_type(soup):
     return soup
 
 
+# 关注回复
+def event_type(soup):
+
+    # 修改xml
+    soup.MsgType.string = "news"
+    count = soup.new_tag("ArticleCount")
+    count.string = "1"
+    soup.xml.append(count)
+
+    articles = soup.new_tag("Articles")
+    item = soup.new_tag("item")
+    title = soup.new_tag("Title")
+    title.string = "叫你如何用"
+    desc = soup.new_tag("Description")
+    desc.string = "这是一篇帮助文章"
+    picurl = soup.new_tag("PicUrl")
+    picurl.string = "https://mp.weixin.qq.com/cgi-bin/filepage?type=2&begin=0&count=12&token=186380172&lang=zh_CN"
+    url = soup.new_tag("Url")
+    url.string = "https://mp.weixin.qq.com/s/7jOLErZMSXqx1s14xKQxBg"
+
+    articles.append(item)
+    item.append(title)
+    item.append(desc)
+    item.append(picurl)
+    item.append(url)
+    soup.MsgType.insert_after(item)
+    soup.Event.extract()
+
+    return soup
+
+
 # 微信官方验证
 def weixinyanzheng():
     signature = request.args.get("signature")

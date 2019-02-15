@@ -3,7 +3,7 @@ from aip import AipSpeech
 import threading
 import time
 
-""" 你的 APPID AK SK """
+""" APPID AK SK """
 APP_ID = '15508666'
 API_KEY = 'tgBwyd0UCMT2LdOCTW6olIiF'
 SECRET_KEY = '8TgXdXee1STlAO8HbW4l2TRmmDZUmQbL'
