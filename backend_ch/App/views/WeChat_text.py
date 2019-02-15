@@ -2,6 +2,7 @@
 
 from bs4 import BeautifulSoup
 import urllib3
+import os
 
 
 def get_text(uid, url):
@@ -19,7 +20,14 @@ def get_text(uid, url):
 
     all_p = main_content.find_all("p")
 
-    with open(f"data/{uid}/txt","w",encoding="utf8") as f:
+    # 目录 容错
+    path = os.getcwd()
+    path = os.path.join(path,"data",uid)
+    isExists = os.path.exists(path)
+    if not isExists:
+        os.makedirs(path)
+
+    with open(f"{path}/txt","w",encoding="utf8") as f:
 
         for i in all_p:
             if len(i.text) == 1:

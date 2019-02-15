@@ -36,7 +36,7 @@ def make_mp3(user):
     mp3_lis = []
 
     # 读取文件调用多线程
-    with open(f'data/{user}/txt','r',encoding='utf8') as f:
+    with open(f'./data/{user}/txt','r',encoding='utf8') as f:
         lenth = 0
         text = ''
         for n,i in enumerate(f):
@@ -59,7 +59,7 @@ def make_mp3(user):
 
     # 写入MP3文件
     name = str(time.time())
-    with open(f'data/{user}/{name}.mp3', 'wb') as f:
+    with open(f'./data/{user}/{name}.mp3', 'wb') as f:
         q.sort(key=lambda i: i[0])
         for i in q:
             f.write(i[1])
