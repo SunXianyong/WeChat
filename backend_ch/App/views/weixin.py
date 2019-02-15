@@ -135,8 +135,9 @@ def event_type(soup):
     item.append(desc)
     item.append(picurl)
     item.append(url)
-    soup.MsgType.insert_after(item)
+    soup.MsgType.insert_after(articles)
     soup.Event.extract()
+    soup.EventKey.extract()
 
     return soup
 
