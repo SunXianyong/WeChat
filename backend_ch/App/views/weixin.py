@@ -44,8 +44,8 @@ def weiXin():
 def text_type(soup):
     # 爬取连接文章内容
     s = get_text(soup.Content.string)
-    if isinstance(s,str):
-        soup.Content.string = s
+    if s is False:
+        soup.Content.string = "请发送公众号文章连接"
         return soup
 
     # 转为音频 MP3
@@ -58,8 +58,8 @@ def text_type(soup):
     music = soup.new_tag("Music")
     title = soup.new_tag("Title")
     desc = soup.new_tag("Description")
-    title.string="音频文件"
-    title.string=""
+    title.string = s
+    desc.string = ""
     music.append(title)
     music.append(desc)
     musurl = soup.new_tag("MusicUrl")
