@@ -14,7 +14,7 @@ def get_text(url):
 
     soup = BeautifulSoup(html.data,features="lxml")
     all_content = soup.find('div',id='img-content')
-    title = all_content.find("h2").text
+    title = all_content.find("h2").text.rstrip()
     main_content = all_content.find("div",id="js_content")
 
     all_p = main_content.find_all("p")
